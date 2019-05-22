@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingBottom="90dp"
-        android:src="@drawable/splashlogo"
+        android:src="@drawable/splashscreenlogo"
         android:layout_gravity="center"
         android:layout_centerInParent="true"
         android:contentDescription="TODO" />
