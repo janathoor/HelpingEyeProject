@@ -56,60 +56,6 @@ public class SignUpActivity extends AppCompatActivity {
         mPasswordStr=mPassword.getText().toString();
         mAddressStr=mAddress.getText().toString();
         mPhonenumberStr=mPhonenumber.getText().toString();
-        //recorder
-        play = (Button) findViewById(R.id.playBtn);
-        stop = (Button) findViewById(R.id.stopBtn);
-        record = (Button) findViewById(R.id.recordBtn);
-        stop.setEnabled(false);
-        play.setEnabled(false);
-        final MediaRecorder myAudioRecorder = new MediaRecorder();
-        myAudioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        myAudioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-        myAudioRecorder.setOutputFile(outputFile);
-
-        record.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    myAudioRecorder.prepare();
-                    myAudioRecorder.start();
-                } catch (IllegalStateException ise) {
-                    // make something ...
-                } catch (IOException ioe) {
-                    // make something
-                }
-                record.setEnabled(false);
-                stop.setEnabled(true);
-                Toast.makeText(getApplicationContext(), "Recording started", Toast.LENGTH_LONG).show();
-            }
-        });
-        stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myAudioRecorder.stop();
-                myAudioRecorder.release();
-                // myAudioRecorder = null;
-                record.setEnabled(true);
-                stop.setEnabled(false);
-                play.setEnabled(true);
-                Toast.makeText(getApplicationContext(), "Audio Recorder stopped", Toast.LENGTH_LONG).show();
-            }
-        });
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MediaPlayer mediaPlayer = new MediaPlayer();
-                try {
-                    mediaPlayer.setDataSource(outputFile);
-                    mediaPlayer.prepare();
-                    mediaPlayer.start();
-                    Toast.makeText(getApplicationContext(), "Playing Audio", Toast.LENGTH_LONG).show();
-                } catch (Exception e) {
-                    // make something
-                }
-            }
-        });
 
         mSignup=findViewById(R.id.signupTV);
         mSignup.setOnClickListener(new View.OnClickListener() {

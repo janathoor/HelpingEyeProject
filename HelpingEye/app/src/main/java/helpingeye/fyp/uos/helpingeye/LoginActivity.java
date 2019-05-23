@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-   TextView signupTextView,mLoginbtntxtview;
+   TextView msignupTV,mloginTV;
    String signupStr,emailStr,passwordStr;
     EditText mEmailET, mPassET;
     FirebaseAuth auth;
@@ -31,17 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         mEmailET=findViewById(R.id.email_login_edit_text);
         mPassET=findViewById(R.id.password_login_edit_text);
 
-        signupTextView=findViewById(R.id.signupTV);
-        signupStr=signupTextView.getText().toString();
-
-        signupTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
-            }
-        });
-
-        mLoginbtntxtview.setOnClickListener(new View.OnClickListener() {
+        mloginTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -65,6 +55,15 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             });
                 }
+            }
+        });
+        msignupTV=findViewById(R.id.signupTV);
+        signupStr=msignupTV.getText().toString();
+
+        msignupTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
             }
         });
 
