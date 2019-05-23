@@ -37,12 +37,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/name_edit_text"
+                android:id="@+id/nameET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/fullnamelogo"
                 android:textSize="15sp"
-                android:hint="Full Name" />
+                android:hint="@string/full_name" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -63,11 +64,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/email_edit_text"
+                android:id="@+id/emailET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/envelope"
                 android:textSize="15sp"
+                android:layout_marginLeft="10dp"
                 android:hint="Email" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
@@ -88,13 +90,18 @@
             app:hintTextAppearance="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/password_edit_text"
+                android:id="@+id/passwordET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/password_text_input"
+                android:layout_alignEnd="@+id/password_text_input"
+                android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/lock"
+                android:hint="@string/password"
                 android:textSize="15sp"
-                android:hint="Password" />
+                android:layout_alignRight="@+id/password_text_input" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -115,12 +122,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/phonenumber_edit_text"
+                android:id="@+id/phonenumberET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/phonenumberlogo"
                 android:textSize="15sp"
-                android:hint="Phone Number" />
+                android:layout_marginLeft="10dp"
+                android:hint="@string/phone_number" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -141,12 +149,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/Address_edit_text"
+                android:id="@+id/AddressET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/addresslogo"
                 android:textSize="15sp"
-                android:hint="Address" />
+                android:layout_marginLeft="10dp"
+                android:hint="@string/address" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -154,7 +163,7 @@
         android:id="@+id/RecordVoice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Record your Voice"
+        android:text="@string/record_your_voice"
         android:textStyle="bold"
         android:textSize="25sp"
         android:textColor="@color/colorPrimary"
@@ -164,8 +173,8 @@
         />
 
     <Button
-        android:id="@+id/record"
-        android:layout_width="125dp"
+        android:id="@+id/recordBtn"
+        android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_below="@+id/RecordVoice"
         android:layout_marginStart="30dp"
@@ -175,18 +184,17 @@
         android:text="Record" />
 
     <Button
-        android:id="@+id/stop"
+        android:id="@+id/stopBtn"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/RecordVoice"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/stop"
-        android:text="Stop"
-        android:layout_marginStart="10dp" />
+        android:text="Stop" />
 
     <Button
-        android:id="@+id/play"
+        android:id="@+id/playBtn"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -195,7 +203,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/play"
+        android:layout_below="@+id/playBtn"
         android:weightSum="1"
         android:id="@+id/selectPhotoLL"
         android:orientation="horizontal">
@@ -206,7 +214,7 @@
             android:layout_weight="0.1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/play"
+            android:layout_below="@+id/playBtn"
             android:src="@drawable/camera" />
 
         <Button
@@ -232,7 +240,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
-                android:id="@+id/signuppageTV"
+                android:id="@+id/signupTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SignUp"

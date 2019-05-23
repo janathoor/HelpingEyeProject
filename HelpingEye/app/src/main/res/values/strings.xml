@@ -4,6 +4,10 @@
     <string name="signupmainpage">SignUp</string>
     <string name="password">Password</string>
     <string name="enter_email">Enter Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="record_your_voice">Record your Voice</string>
 
 
 </resources>
