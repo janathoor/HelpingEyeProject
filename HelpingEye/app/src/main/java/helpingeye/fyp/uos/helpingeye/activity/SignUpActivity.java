@@ -27,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     EditText mName, mPassword, mEmail, mAddress,mPhonenumber;
     String mNameStr, mPasswordStr, mEmailStr, mAddressStr, mPhonenumberStr;
-    TextView mSignup;
+    Button mSignup;
 
 
     private Button play, stop, record;

@@ -4,21 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".activity.SignUpActivity"
     android:background="@drawable/gradiant_background"
     android:orientation="vertical">
-    <ImageView
-        android:id="@+id/signinlogo"
-        android:layout_width="220dp"
-        android:layout_height="200dp"
-        android:src="@drawable/eyelogo"
-        android:layout_gravity="center"
-        android:contentDescription="@string/todo1" />
 
     <RelativeLayout
         android:id="@+id/relatielayoutone"
@@ -26,6 +17,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
         android:layout_height="wrap_content">
         <android.support.design.widget.TextInputLayout
             android:id="@+id/name_text_input"
@@ -43,7 +35,9 @@
                 android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/fullnamelogo"
                 android:textSize="15sp"
-                android:hint="@string/full_name" />
+                android:hint="@string/full_name"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/fullnamelogo" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -70,7 +64,9 @@
                 android:drawableLeft="@drawable/envelope"
                 android:textSize="15sp"
                 android:layout_marginLeft="10dp"
-                android:hint="Email" />
+                android:hint="@string/email"
+                android:drawableStart="@drawable/envelope"
+                android:layout_marginStart="10dp" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -101,7 +97,9 @@
                 android:drawableLeft="@drawable/lock"
                 android:hint="@string/password"
                 android:textSize="15sp"
-                android:layout_alignRight="@+id/password_text_input" />
+                android:layout_alignRight="@+id/password_text_input"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/lock" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -128,7 +126,9 @@
                 android:drawableLeft="@drawable/phonenumberlogo"
                 android:textSize="15sp"
                 android:layout_marginLeft="10dp"
-                android:hint="@string/phone_number" />
+                android:hint="@string/phone_number"
+                android:drawableStart="@drawable/phonenumberlogo"
+                android:layout_marginStart="10dp" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
@@ -155,13 +155,13 @@
                 android:drawableLeft="@drawable/addresslogo"
                 android:textSize="15sp"
                 android:layout_marginLeft="10dp"
-                android:hint="@string/address" />
+                android:hint="@string/address"
+                android:layout_marginStart="10dp" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/playBtn"
         android:weightSum="1"
         android:id="@+id/selectPhotoLL"
         android:orientation="horizontal">
@@ -172,8 +172,8 @@
             android:layout_weight="0.1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/playBtn"
-            android:src="@drawable/camera" />
+            android:src="@drawable/camera"
+            android:layout_marginStart="20dp" />
 
         <Button
             android:id="@+id/SelectPhotoBtn"
@@ -183,7 +183,8 @@
             android:layout_marginRight="20dp"
             android:longClickable="true"
             android:text="Select Photo"
-            android:layout_weight="0.9" />
+            android:layout_weight="0.9"
+            android:layout_marginEnd="20dp" />
     </LinearLayout>
     <android.support.v7.widget.CardView
         android:layout_width="300dp"
@@ -195,19 +196,17 @@
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/colorPrimary">
-        <RelativeLayout
+        <Button
+            android:id="@+id/signupTV"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/signupTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SignUp"
-                android:textSize="20sp"
-                android:layout_centerInParent="true"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"/>
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:layout_gravity="center"
+            android:background="@color/colorTranparent"
+            android:textSize="25sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
 
     </android.support.v7.widget.CardView>
 

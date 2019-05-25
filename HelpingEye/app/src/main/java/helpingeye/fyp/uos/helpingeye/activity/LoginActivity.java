@@ -4,61 +4,63 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import helpingeye.fyp.uos.helpingeye.HomePageActivity;
 import helpingeye.fyp.uos.helpingeye.R;
 
 public class LoginActivity extends AppCompatActivity {
-   TextView msignupTV,mloginTV;
+   TextView msignupTV;
+   Button mloginTV;
    String signupStr,emailStr,passwordStr;
-    EditText mEmailET, mPassET;
-    FirebaseAuth auth;
+    EditText mEmailET, mPwrdET;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
 
-        auth= FirebaseAuth.getInstance();
+        mAuth= FirebaseAuth.getInstance();
 
         mEmailET=findViewById(R.id.email_login_edit_text);
-        mPassET=findViewById(R.id.password_login_edit_text);
+        mPwrdET=findViewById(R.id.password_login_edit_text);
 
+        mloginTV=findViewById(R.id.loginTV);
         mloginTV.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                emailStr = mEmailET.getText().toString();
-                passwordStr = mPassET.getText().toString();
-                if (TextUtils.isEmpty(emailStr) || TextUtils.isEmpty(passwordStr)){
-                    Toast.makeText(LoginActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
-                } else {
-                    auth.signInWithEmailAndPassword(emailStr,passwordStr)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()){
-                                        Intent intent=new Intent(LoginActivity.this, HomePageActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    } else {
-                                        Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+            public void onClick(View v) {
+                emailStr= mEmailET.getText().toString();
+                passwordStr= mPwrdET.getText().toString();
+                if (emailStr.isEmpty()){
+                    mEmailET.setError("Please  enter your email first");
+                }else if (passwordStr.isEmpty()){
+                    mPwrdET.setError("Please enter your password first");
+                }else{
+                    mAuth.createUserWithEmailAndPassword(emailStr, passwordStr).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            Toast.makeText(LoginActivity.this, "User successfully logedin", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, HomePageActivity.class));
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
-        });
+         });
         msignupTV=findViewById(R.id.signupTV);
         signupStr=msignupTV.getText().toString();
 
