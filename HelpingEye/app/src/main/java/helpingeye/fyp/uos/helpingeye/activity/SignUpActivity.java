@@ -1,10 +1,8 @@
-package helpingeye.fyp.uos.helpingeye;
+package helpingeye.fyp.uos.helpingeye.activity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -22,7 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.IOException;
+import helpingeye.fyp.uos.helpingeye.R;
+import helpingeye.fyp.uos.helpingeye.Models.UserModel;
 
 public class SignUpActivity extends AppCompatActivity {
 

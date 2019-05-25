@@ -8,6 +8,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="address">Address</string>
     <string name="record_your_voice">Record your Voice</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

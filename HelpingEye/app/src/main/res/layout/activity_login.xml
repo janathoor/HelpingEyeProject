@@ -12,7 +12,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/gradiant_background"
     android:orientation="vertical"
-    tools:context="helpingeye.fyp.uos.helpingeye.LoginActivity">
+    tools:context="helpingeye.fyp.uos.helpingeye.activity.LoginActivity">
     
     <ImageView
         android:id="@+id/signinlogo"

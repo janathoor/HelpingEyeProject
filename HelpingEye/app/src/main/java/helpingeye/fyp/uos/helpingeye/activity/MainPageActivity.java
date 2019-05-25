@@ -1,10 +1,12 @@
-package helpingeye.fyp.uos.helpingeye;
+package helpingeye.fyp.uos.helpingeye.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import helpingeye.fyp.uos.helpingeye.R;
 
 public class MainPageActivity extends AppCompatActivity {
    TextView mloginTxtview,msignupTxtview;

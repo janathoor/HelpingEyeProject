@@ -1,9 +1,11 @@
-package helpingeye.fyp.uos.helpingeye;
+package helpingeye.fyp.uos.helpingeye.activity;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import helpingeye.fyp.uos.helpingeye.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

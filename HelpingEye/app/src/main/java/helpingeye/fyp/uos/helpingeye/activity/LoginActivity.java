@@ -1,4 +1,4 @@
-package helpingeye.fyp.uos.helpingeye;
+package helpingeye.fyp.uos.helpingeye.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -14,6 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import helpingeye.fyp.uos.helpingeye.HomePageActivity;
+import helpingeye.fyp.uos.helpingeye.R;
 
 public class LoginActivity extends AppCompatActivity {
    TextView msignupTV,mloginTV;
@@ -35,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 emailStr = mEmailET.getText().toString();
                 passwordStr = mPassET.getText().toString();
                 if (TextUtils.isEmpty(emailStr) || TextUtils.isEmpty(passwordStr)){
@@ -46,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                        Intent intent=new Intent(LoginActivity.this,HomePageActivity.class);
+                                        Intent intent=new Intent(LoginActivity.this, HomePageActivity.class);
                                         startActivity(intent);
                                         finish();
                                     } else {

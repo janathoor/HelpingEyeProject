@@ -1,4 +1,4 @@
-package helpingeye.fyp.uos.helpingeye;
+package helpingeye.fyp.uos.helpingeye.Models;
 
 public class UserModel {
     String Name;
