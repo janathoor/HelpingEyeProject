@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context="helpingeye.fyp.uos.helpingeye.LoginActivity">
+
+        <ImageView
+            android:id="@+id/signinlogo"
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:src="@drawable/newcameralogo"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todologinimage" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/Email_login_text_input"
+            android:textColorHint="@color/text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/gradiant_background"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/email_login_edit_text"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/text"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mailicon"
+                android:textSize="15sp"
+                android:hint="@string/email"
+                android:drawableStart="@drawable/mailicon" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_login_text_input"
+            android:textColorHint="@color/text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/gradiant_background"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/password_login_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/padlock"
+                android:textColorHint="@color/text"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:drawableStart="@drawable/padlock" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_style"/>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/text"
+            android:text="@string/do_you_have_already_an_account"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/signupTV"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:text="@string/signup"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:focusable="true" />
+    </LinearLayout>
+</ScrollView>
