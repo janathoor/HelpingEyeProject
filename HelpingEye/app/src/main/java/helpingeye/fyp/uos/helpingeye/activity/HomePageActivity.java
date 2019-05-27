@@ -73,11 +73,12 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
     }
+
     public void FragmentLoadinManagerWithBackStack(Fragment fragment) {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.home_frame, fragment);
+        fragmentTransaction.add(R.id.home_layout, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
