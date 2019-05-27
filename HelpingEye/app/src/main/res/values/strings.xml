@@ -26,7 +26,6 @@
     <string name="menu_send">Send</string>
     <string name="enter_password">Enter Password</string>
 
-    <string name="login">Login</string>
     <string name="do_you_have_already_an_account">Do you have already an account?</string>
     <string name="signup">SignUp</string>
     <string name="todologinimage">TODO</string>
@@ -47,6 +46,7 @@
     <string name="obstacle_detection">Obstacle Detection</string>
     <string name="search">Search</string>
     <string name="location">Location</string>
+    <string name="alarm">Alarm</string>
 
 
 </resources>
