@@ -4,6 +4,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion "28.0.3"
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "helpingeye.fyp.uos.helpingeye"
         minSdkVersion 15
         targetSdkVersion 27

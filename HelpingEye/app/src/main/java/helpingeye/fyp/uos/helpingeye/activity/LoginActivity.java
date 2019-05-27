@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         mEmailET=findViewById(R.id.email_login_edit_text);
         mPwrdET=findViewById(R.id.password_login_edit_text);
 
-        mloginTV=findViewById(R.id.loginTV);
+        mloginTV=findViewById(R.id.loginbtn);
         mloginTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

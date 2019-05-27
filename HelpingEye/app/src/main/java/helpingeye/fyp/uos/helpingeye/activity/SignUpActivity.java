@@ -56,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
         mAddressStr=mAddress.getText().toString();
         mPhonenumberStr=mPhonenumber.getText().toString();
 
-        mSignup=findViewById(R.id.signupTV);
+        mSignup=findViewById(R.id.signupbtn);
         mSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
