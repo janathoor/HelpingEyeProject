@@ -1,5 +1,6 @@
 package helpingeye.fyp.uos.helpingeye.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,12 +14,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.ImageView;
 
+import helpingeye.fyp.uos.helpingeye.Fragments.AboutUsFragment;
+import helpingeye.fyp.uos.helpingeye.Fragments.AlarmFragment;
+import helpingeye.fyp.uos.helpingeye.Fragments.ContactFragment;
+import helpingeye.fyp.uos.helpingeye.Fragments.LocationFragment;
+import helpingeye.fyp.uos.helpingeye.Fragments.ObstaleDetectionFragment;
+import helpingeye.fyp.uos.helpingeye.Fragments.SearchFragment;
 import helpingeye.fyp.uos.helpingeye.R;
 
 public class HomePageActivity extends AppCompatActivity
+
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    ImageView mOD, mcontact, mAlarm, mSearch, mLocation, mAboutUs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +50,55 @@ public class HomePageActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Initialization
+        mOD=findViewById(R.id.odhexa);
+        mOD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageActivity.this, ObstaleDetectionFragment.class));
+            }
+        });
+
+        mcontact=findViewById(R.id.contacthexa);
+        mcontact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageActivity.this, ContactFragment.class));
+            }
+        });
+
+        mAlarm=findViewById(R.id.alarmhexa);
+        mAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageActivity.this, AlarmFragment.class));
+            }
+        });
+
+        mSearch=findViewById(R.id.searchhexa);
+        mSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageActivity.this, SearchFragment.class));
+            }
+        });
+
+        mLocation=findViewById(R.id.locationhexa);
+        mLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageActivity.this, LocationFragment.class));
+            }
+        });
+
+        mAboutUs=findViewById(R.id.abouthexa);
+        mAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePageActivity.this, AboutUsFragment.class));
+            }
+        });
     }
 
     @Override
@@ -80,15 +139,17 @@ public class HomePageActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_obst_dtctr) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_contact) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_alarm) {
 
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_search) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_location) {
+
+        } else if (id == R.id.nav_location) {
 
         } else if (id == R.id.nav_send) {
 

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "7760627833-fu98ijci8go0ka7mj6oeun8ifue8ocje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "helpingeye.fyp.uos.helpingeye",
+            "certificate_hash": "ebecfb50c270a4ebc98be69bfaf1011bfeb7881c"
+          }
+        },
+        {
           "client_id": "7760627833-onf19hkickkt12um8njf5g7b9r8rlhqt.apps.googleusercontent.com",
           "client_type": 3
         }

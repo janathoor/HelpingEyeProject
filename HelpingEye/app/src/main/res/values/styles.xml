@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
+    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -17,6 +18,7 @@
     <style name="Widget.MaterialComponents"></style>
 
     <style name="Widget"></style>
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

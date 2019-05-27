@@ -1,12 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/gradiant_background"
-    android:orientation="vertical"
-    tools:context="helpingeye.fyp.uos.helpingeye.activity.LoginActivity">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".HomePageActivity"
+        android:background="@color/background"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/signinlogo"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:src="@drawable/newcameralogo"
+            android:contentDescription="@string/todologinimage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <FrameLayout
+                android:id="@+id/odframe"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/odhexa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/hexagonshapecard"
+                    android:contentDescription="@string/todo3" />
+                <TextView
+                    android:id="@+id/odtextview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/obstacle_detection"
+                    android:gravity="center"
+                    android:textColor="@color/text"/>
+
+                <ImageView
+                    android:id="@+id/odimage"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/odicon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/contactframe"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/contacthexa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/hexagonshapecard"
+                    android:contentDescription="@string/todo3" />
+                <TextView
+                    android:id="@+id/contacttextview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Contacts"
+                    android:gravity="center"
+                    android:textColor="@color/text"/>
+                <ImageView
+                    android:id="@+id/contactimage"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/contacticon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginStart="26dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/alarmframe"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/alarmhexa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/hexagonshapecard"
+                    android:contentDescription="@string/todo3" />
+                <TextView
+                    android:id="@+id/alarmtextview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/alarm"
+                    android:gravity="center"
+                    android:textColor="@color/text"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/alarm"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:contentDescription="@string/todo4"
+                    android:layout_marginStart="26dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/searchframe"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/searchhexa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/hexagonshapecard"
+                    android:contentDescription="@string/todo3" />
+                <TextView
+                    android:id="@+id/searchtextview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/search"
+                    android:gravity="center"
+                    android:textColor="@color/text"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/google"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginStart="26dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/locationframe"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/locationhexa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/hexagonshapecard"
+                    android:contentDescription="@string/todo3" />
+                <TextView
+                    android:id="@+id/locationtextview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/location"
+                    android:gravity="center"
+                    android:textColor="@color/text"/>
+                <ImageView
+                    android:id="@+id/locationimage"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/locationicon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginStart="26dp"
+                    android:contentDescription="@string/todo6" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/aboutframe"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/abouthexa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/hexagonshapecard"
+                    android:contentDescription="@string/todo3" />
+                <TextView
+                    android:id="@+id/abouttextview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/about_us"
+                    android:gravity="center"
+                    android:textColor="@color/text"/>
+                <ImageView
+                    android:id="@+id/aboutimage"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/abouticon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginStart="26dp" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
