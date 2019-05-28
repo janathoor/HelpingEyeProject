@@ -35,7 +35,6 @@
     <string name="todo2">TODO</string>
     <string name="create_account">Create Account</string>
     <string name="todo3">TODO</string>
-    <string name="contacts">Contacts</string>
     <string name="todo4">TODO</string>
     <string name="todo6">TODO</string>
 
@@ -47,6 +46,6 @@
     <string name="search">Search</string>
     <string name="location">Location</string>
     <string name="alarm">Alarm</string>
-
+    <string name="contacts">Contacts</string>
 
 </resources>
