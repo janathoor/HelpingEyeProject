@@ -33,6 +33,7 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'com.android.support:design:27.1.1-alpha1'
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
 
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-database:16.0.1'
@@ -46,5 +47,12 @@ dependencies {
     implementation 'com.karumi:dexter:4.2.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
+    implementation 'com.victor:lib:1.0.4'
+    implementation 'com.android.support:recyclerview-v7:27.1.o'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'androidx.fragment:fragment:1.0.0'
+
 }
 apply plugin: 'com.google.gms.google-services'

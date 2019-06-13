@@ -170,36 +170,57 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:id="@+id/selectPhotoLL"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/ivImage"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:layout_weight="0.1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/photocamera"
-                android:layout_marginStart="20dp"
-                android:contentDescription="@string/todo2" />
+            android:orientation="vertical"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="1"
+                android:id="@+id/selectPhotoLL"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/photocamera"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/todo2" />
 
-            <Button
-                android:id="@+id/SelectPhotoBtn"
-                android:layout_width="96dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                <Button
+                    android:id="@+id/SelectPhotoBtn"
+                    android:layout_width="96dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/select_photo"
+                    android:textColor="@color/text"
+                    android:background="@drawable/btn_style"
+                    android:layout_weight="0.9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginRight="20dp"
-                android:text="@string/select_photo"
-                android:textColor="@color/text"
-                android:background="@drawable/btn_style"
-                android:layout_weight="0.9"
-                android:layout_marginEnd="20dp" />
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/UploadPhotobtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Upload Photo"
+                    android:textColor="@color/text"
+                    android:background="@drawable/btn_style"
+                    />
 
-
+            </LinearLayout>
 
         </LinearLayout>
-
         <Button
             android:id="@+id/signupbtn"
             android:layout_width="300dp"
